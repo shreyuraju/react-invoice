@@ -1,27 +1,39 @@
+@media print {
+    .hide-on-print {
+        display: none !important;
+        /* Hide the button */
+    }
+}
+
 .a4-container {
-    width: 230mm;
+    width: 215mm;
     /* A4 width */
-    height: 317mm;
+    height: 300mm;
     /* A4 height */
     padding-top: 10px;
     margin: 0 auto;
     /* Center the container horizontally */
     background-color: white;
     /* Set background color to white */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 1); */
     /* Optional: Add a box shadow for visual effect */
+
+    
 }
 
 .invoice-table thead {
-    border: 0px solid black;
-    border-collapse: collapse;
+    /* border: 0px solid black; */
+    /* border-collapse: collapse; */
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .invoice-table {
     width: 210mm;
     height: 297mm;
     border-collapse: collapse;
-
+    border: 1px solid black;
 
     margin-left: auto;
     /* Set left margin to auto */
@@ -41,3 +53,13 @@
     padding: 8px;
     text-align: left;
 }
+
+.button-content {
+    /* Center the content horizontally and vertically */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: adjust width and height if needed */
+    /* width: 10%; */
+    /* height: 5%; */
+  }
