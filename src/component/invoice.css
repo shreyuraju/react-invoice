@@ -1,9 +1,25 @@
 @media print {
+    body {
+        transform: scale(1.0);
+        transform-origin: top left;
+    }
+
     .hide-on-print {
         display: none !important;
-        /* Hide the button */
+        /* Hide elements with the class hide-on-print */
+    }
+
+    .mt-4 {
+        display: none;
+        /* Hide elements with the class mt-4 */
+    }
+
+    .mb-4 {
+        display: none;
+        /* Hide elements with the class mb-4 */
     }
 }
+
 
 .a4-container {
     width: 215mm;
@@ -18,7 +34,7 @@
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 1); */
     /* Optional: Add a box shadow for visual effect */
 
-    
+
 }
 
 .invoice-table thead {
@@ -56,10 +72,20 @@
 
 .button-content {
     /* Center the content horizontally and vertically */
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     /* Optional: adjust width and height if needed */
     /* width: 10%; */
     /* height: 5%; */
-  }
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign {
+    text-align: right;
+}
