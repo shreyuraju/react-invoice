@@ -75,17 +75,31 @@ const Invoice = ({ invoiceData }) => {
   var itemRate = [];
   var itemAmount = [];
 
-  items.forEach((item, index) => {
-    var currentItemIndex = index + 1;
-    itemIndex = itemIndex + currentItemIndex + "\n";
-    itemName.push(item.name);
-    itemQuantity.push(item.quantity);
-    totalQuantity += item.quantity;
-    itemRate.push(item.price);
-    itemAmount.push(item.total);
-    totalAmount += item.total;
-  });
+  //uncomment when in use 
+
+  // items.foreach((item, index) => {
+  //   var currentItemIndex = index + 1;
+  //   itemIndex = itemIndex + currentItemIndex + "\n";
+  //   itemName.push(item.name);
+  //   itemQuantity.push(item.quantity);
+  //   totalQuantity += item.quantity;
+  //   itemRate.push(item.price);
+  //   itemAmount.push(item.total);
+  //   totalAmount += item.total;
+  // });
+
   var amountWords = numberToIndianWords(totalAmount);
+
+
+
+  //temporary variables COMMENT LATER
+  itemIndex = "1"
+  itemName.push(items.name);
+  itemQuantity.push(items.quantity);
+  totalQuantity += items.quantity;
+  itemRate.push(items.price);
+  itemAmount.push(items.total);
+  totalAmount += items.total;
 
   // const generateInvoice = () => {
   //   const doc = new jsPDF();
@@ -106,7 +120,7 @@ const Invoice = ({ invoiceData }) => {
             <th colspan="2">[{copy}]</th>
           </tr>
           <tr>
-            <td rowspan="3" colspan="2" style={{ width: '100px' }}><b>DURO TECH INDUSTRIES</b><br />Composition Dealer<br />D.No 1-376(1)<br />Kalambadi Padav Attur North Nitte Karkala<br />State Name : Karnataka, Code : 29<br />GSTIN/UIN : 29AHOPN9298C1ZK<br />State Name : Karnataka, Code : 29</td>
+            <td rowspan="3" colspan="2" style={{ width: '100px' }}><b>SELLER NAME</b><br />SELLER ADDRESS</td>
             <td colspan="3" style={{ height: '1px' }}>Invoice No. e-Way Bill No.<br /><b>{billNo}</b></td>
             <td colspan="2" style={{ height: '1px' }}>date:<br /><b>{invoiceDate}</b></td>
 
@@ -156,7 +170,7 @@ const Invoice = ({ invoiceData }) => {
           <tr style={{ height: '1px' }}>
             <td style={{ width: '1px' }}>Sl
               no</td>
-            <td style={{textAlign:'center'}}>Description of Goods</td>
+            <td style={{ textAlign: 'center' }}>Description of Goods</td>
             <td>HSN/SAC</td>
             <td>Quantity</td>
             <td>Rate</td>
@@ -226,7 +240,7 @@ const Invoice = ({ invoiceData }) => {
           <tr style={{ height: '50px' }} className='sign'>
             <td colspan="2">Declaration :<br />{declaration}</td>
             <td colspan="5" style={{ height: '50px' }}>
-              <b>for DURO TECH INDUSTRIES</b><br /><br />Authorised Signatory
+              <b>for SELLER NAME</b><br /><br />Authorised Signatory
             </td>
           </tr>
         </tfoot>
