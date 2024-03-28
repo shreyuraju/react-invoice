@@ -88,7 +88,7 @@ const Invoice = ({ invoiceData }) => {
   //   totalAmount += item.total;
   // });
 
-  var amountWords = numberToIndianWords(totalAmount);
+  // var amountWords = numberToIndianWords(totalAmount);
 
 
 
@@ -100,6 +100,8 @@ const Invoice = ({ invoiceData }) => {
   itemRate.push(items.price);
   itemAmount.push(items.total);
   totalAmount += items.total;
+  
+  var amountWords = numberToIndianWords(totalAmount);
 
   // const generateInvoice = () => {
   //   const doc = new jsPDF();
